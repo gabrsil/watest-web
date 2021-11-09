@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  web:
+    container_name: waproject-web
+    build:
+      context: .
+      dockerfile: docker/dev
+    ports:
+      - "3000:3000"
+      - "35729:35729"
+    volumes:
+      - .:/src
